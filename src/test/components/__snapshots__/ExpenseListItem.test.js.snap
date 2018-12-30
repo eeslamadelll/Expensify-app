@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render individual items of expenses with data 1`] = `
+<div>
+  <Link
+    replace={false}
+    to="/edit/1"
+  >
+    <p>
+      Description : 
+      Banana
+    </p>
+  </Link>
+  <span>
+    Created At : 
+    -259200000
+  </span>
+  <p>
+    Amount : 
+    10950
+  </p>
+</div>
+`;
