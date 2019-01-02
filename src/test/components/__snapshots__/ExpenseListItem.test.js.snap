@@ -13,11 +13,11 @@ exports[`should render individual items of expenses with data 1`] = `
   </Link>
   <span>
     Created At : 
-    -259200000
+    December 29th, 1969
   </span>
   <p>
     Amount : 
-    10950
+    $109.50
   </p>
 </div>
 `;
