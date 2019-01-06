@@ -33,3 +33,25 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 });
+
+// creating an action generator for the set expenses
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses
+});
+
+// creating the async startSetExpenses action to fetch from firebase DB
+export const startSetExpenses = () => {
+    return (dispatch) => {
+        return database.ref('expenses').once('value').then((snapshot) => {
+            const expenses = [];
+            snapshot.forEach((childSnapshot) => {
+                expenses.push({
+                    id: childSnapshot.key,
+                    ...childSnapshot.val()
+                });
+            });
+            dispatch(setExpenses(expenses));
+        });
+    }
+}

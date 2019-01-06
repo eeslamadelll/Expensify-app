@@ -12,7 +12,7 @@ exports[`should render ExpenseList with data 1`] = `
   />
   <ExpenseListItem
     amount={12950}
-    createdAt={"1970-01-01T00:00:00.000Z"}
+    createdAt={0}
     description="Onion"
     id="2"
     key="2"

@@ -11,7 +11,7 @@ export default [{
     description: 'Onion',
     note: '',
     amount: 12950,
-    createdAt: moment(0)
+    createdAt: 0
 }, {
     id: '3',
     description: 'Carrot',
