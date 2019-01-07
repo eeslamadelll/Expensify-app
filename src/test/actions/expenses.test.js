@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import {addExpense, removeExpense, editExpense, startAddExpense, setExpenses } from '../../actions/expenses';
+import {addExpense, removeExpense, editExpense, startAddExpense, setExpenses, startSetExpenses, startRemoveExpense } from '../../actions/expenses';
 import expenses from '../fixture/expenses';
 import database from '../../firebase/firebase';
 
@@ -20,6 +20,21 @@ test('should test remove and return an object', () => {
         type: 'REMOVE_EXPENSE',
         id: '123123'
     });
+});
+
+test('should remove expense from firebase', (done) => {
+    const store = createMockStore({});
+    store.dispatch(startRemoveExpense({ id: 1 })).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'REMOVE_EXPENSE',
+            id: 1
+        });
+        return database.ref('expenses/1').once('value');
+    }).then((snapshot) => {
+        expect(snapshot.val()).toBeFalsy();
+        done();
+    })
 });
 
 test('should test update expense and return an object', () => {
@@ -49,14 +64,6 @@ test('should test add expense and return an object with data', () => {
     expect(action).toEqual({
         type: 'ADD_EXPENSE',
         expense: expenses[2]
-    });
-});
-
-test('should test set expenses and return an object with data', () => {
-    const action = setExpenses(expenses);
-    expect(action).toEqual({
-        type: 'SET_EXPENSES',
-        expenses
     });
 });
 
@@ -105,6 +112,26 @@ test('should add default expenses to database and redux store', (done) => {
         return database.ref(`expenses/${actions[0].expense.id}`).once('value');
     }).then((snapshot) => {
         expect(snapshot.val()).toEqual(expenseData);
+        done();
+    });
+});
+
+test('should test set expenses and return an object with data', () => {
+    const action = setExpenses(expenses);
+    expect(action).toEqual({
+        type: 'SET_EXPENSES',
+        expenses
+    });
+});
+
+test('should test startSetExpense and fetch data from firebase test DB', (done) => {
+    const store = createMockStore({});
+    store.dispatch(startSetExpenses()).then(() => {
+        const actions = store.getActions();
+        expect(actions[0]).toEqual({
+            type: 'SET_EXPENSES',
+            expenses
+        });
         done();
     });
 });
