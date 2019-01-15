@@ -1,23 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render individual items of expenses with data 1`] = `
-<div>
-  <Link
-    replace={false}
-    to="/edit/1"
+<Link
+  className="list-items"
+  replace={false}
+  to="/edit/1"
+>
+  <div
+    className="item"
   >
-    <p>
-      Description : 
+    <p
+      className="description"
+    >
       Banana
     </p>
-  </Link>
-  <span>
-    Created At : 
-    December 29th, 1969
-  </span>
-  <p>
-    Amount : 
-    $109.50
-  </p>
-</div>
+    <span
+      className="date"
+    >
+      December 29th, 1969
+    </span>
+  </div>
+  <div
+    className="item"
+  >
+    <p
+      className="amount"
+    >
+      $109.50
+    </p>
+  </div>
+</Link>
 `;

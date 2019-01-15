@@ -1,27 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render the ExpenseSummary correct with multiple items 1`] = `
-<div>
-  <p>
-    you have 
-    43
-     
-    expenses
-     with total of 
-    $205,247.52
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <p>
+      you have 
+      <span>
+        43
+      </span>
+       
+      expenses
+       with total of 
+      <span>
+        $205,247.52
+      </span>
+    </p>
+    <Link
+      className="add"
+      replace={false}
+      to="/add"
+    >
+      Add Expense
+    </Link>
+  </div>
 </div>
 `;
 
 exports[`Should render the ExpenseSummary correct with one item 1`] = `
-<div>
-  <p>
-    you have 
-    1
-     
-    expense
-     with total of 
-    $2.52
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <p>
+      you have 
+      <span>
+        1
+      </span>
+       
+      expense
+       with total of 
+      <span>
+        $2.52
+      </span>
+    </p>
+    <Link
+      className="add"
+      replace={false}
+      to="/add"
+    >
+      Add Expense
+    </Link>
+  </div>
 </div>
 `;

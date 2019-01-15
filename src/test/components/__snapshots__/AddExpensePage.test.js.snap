@@ -2,11 +2,23 @@
 
 exports[`Should Render AddExpensePage correctly 1`] = `
 <div>
-  <h1>
-    Add Expense
-  </h1>
-  <AddExpenseForm
-    onSubmit={[Function]}
-  />
+  <div
+    className="page-header"
+  >
+    <div
+      className="content-container"
+    >
+      <h1>
+        Add Expense
+      </h1>
+    </div>
+  </div>
+  <div
+    className="content-container"
+  >
+    <AddExpenseForm
+      onSubmit={[Function]}
+    />
+  </div>
 </div>
 `;

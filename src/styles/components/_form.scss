@@ -1,0 +1,22 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    >*{
+        margin-top: $m-size;
+    }
+    .error{
+        font-style: italic;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    button{
+        padding: $s-size $m-size;
+        background-color: #22a7f0;
+    }
+}
+
+.btn-remove{
+    padding: $s-size $m-size;
+    background-color: #dc3545;
+    margin-top: $s-size;
+}

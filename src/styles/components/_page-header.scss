@@ -1,0 +1,19 @@
+.page-header{
+    padding: $l-size;
+    background-color: #ddd;
+    p{
+        margin: 0 0 2.5rem;
+        font-size: $l-size;
+        span{
+            font-weight: bold;
+        }
+    }
+    .add{
+        color: #fff;
+        border-radius: 5px;
+        padding: $s-size $m-size;
+        background-color: #22a7f0;
+        text-decoration: none;
+        display: inline-block;
+    }
+}

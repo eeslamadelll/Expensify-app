@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseList with data 1`] = `
-<div>
+<div
+  className="content-container filtered"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
   <ExpenseListItem
     amount={10950}
     createdAt={-259200000}
@@ -30,9 +51,34 @@ exports[`should render ExpenseList with data 1`] = `
 `;
 
 exports[`should render ExpenseList with no data and show a message 1`] = `
-<div>
-  <p>
-    There is no expenses to show
-  </p>
+<div
+  className="content-container filtered"
+>
+  <div
+    className="list-header"
+  >
+    <div
+      className="show-for-mobile"
+    >
+      Expenses
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Expense
+    </div>
+    <div
+      className="show-for-desktop"
+    >
+      Amount
+    </div>
+  </div>
+  <div
+    className="list-items list-items-empty"
+  >
+    <p>
+      There is no expenses to show
+    </p>
+  </div>
 </div>
 `;

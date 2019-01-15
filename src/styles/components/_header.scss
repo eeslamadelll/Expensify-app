@@ -1,0 +1,22 @@
+.header{
+    background-color: #364051;
+    color: #fff;
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $s-size 0;
+        .title{
+            color: #fff;
+            text-decoration: none;
+            margin: 0;
+            h1{
+                margin: 0;
+            }
+        }
+        button{
+            padding: $s-size $m-size;
+            background-color: #22a7f0;
+        }
+    }
+}

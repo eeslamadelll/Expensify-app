@@ -1,0 +1,39 @@
+.login{
+    background: url('/images/bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: fade-out($color: #000000, $amount: .4);
+    }
+}
+
+.login .container {
+    width: 25%;
+    background-color: fade-out(#fff, .3);
+    padding: 40px 10px;
+    z-index: 50;
+    border-radius: 8px;
+    h1{
+        margin: 0;
+    }
+    p{
+        letter-spacing: 2px;
+        font-size: 18px;
+    }
+    button{
+        background-color: #DD4B39;
+        width: 60%;
+        padding: 10px 15px;
+    }
+}
